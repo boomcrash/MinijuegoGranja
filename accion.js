@@ -138,7 +138,7 @@ function cargarPlayer() {
 
 document.addEventListener("keydown", moverPlayer);
 document.addEventListener("keyup", silenciarPasos);
-document.addEventListener("mousemove", moverPlayerTactil);
+/*document.addEventListener("mousemove", moverPlayerTactil);
 
 function moverPlayerTactil(evento) {
     if(stop==false){
@@ -164,7 +164,7 @@ function moverPlayerTactil(evento) {
         console.log("paralizado");
     }
 
-}
+}*/
 
 function silenciarPasos(){
     stopPasoSound();
