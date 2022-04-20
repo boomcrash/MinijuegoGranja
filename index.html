@@ -9,14 +9,35 @@
 
 </head>
 <body>
-            <!--  -->
+           <!--  -->
             <div class="ventana">
                 <h1>MINIJUEGO FRUTAS</h1>
                 <br>
                 <p>MUEVE TU PERSONAJE Y COME TODAS LAS FRUTAS GENERADAS PARA GANAR EL JUEGO!</p>
+                <br>
+                <p>(A-W-S-D)</p>
             </div>
+
+            <div class="nivel">
+                <table border="2">
+                    <tr>
+                        <th>NIVEL ACTUAL</th>
+                        <th>NIVEL MAXIMO</th>
+                    </tr>
+                    <tr>
+                        <td  id="nivelActual">1</td>
+                        <td id="nivelFinal">6</td>
+                    </tr>
+                </table>
+            </div>
+
             <div class="grafico">
-               <canvas width="750" height="750" id="dibujo"></canvas>
+               <canvas width="750" height="750" id="cuadro"></canvas>
             </div>
+
+            
+
+            <script src="accion.js"></script>
+            
 </body>
 </html>
