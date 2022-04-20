@@ -29,3 +29,19 @@ body{
     margin-right: auto;
     margin-top: 5px;
 }
+
+.grafico{
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: auto;
+    margin-top: auto;
+}
+
+.botones{
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: auto;
+    margin-top: auto;
+}

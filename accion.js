@@ -1,3 +1,9 @@
+var arriba=document.getElementById("arriba");
+var abajo=document.getElementById("abajo");
+var izquierda=document.getElementById("izquierda");
+var derecha=document.getElementById("derecha");
+
+
 var audio = new Audio('audios/bts.mp3');
 var nuevoNivel = new Audio('audios/nuevoNivel.mp3');
 var comer = new Audio('audios/iuju.mp3');
@@ -168,6 +174,86 @@ function moverPlayerTactil(evento) {
 
 function silenciarPasos(){
     stopPasoSound();
+}
+
+arriba.addEventListener("click",subirPlayer);
+abajo.addEventListener("click",bajarPlayer);
+izquierda.addEventListener("click",izquierdaPlayer);
+derecha.addEventListener("clickd",derechaPlayer);
+
+function subirPlayer(){
+    papel.clearRect(0, 0, cuadro.width, cuadro.height);
+    papel.drawImage(imagen, 0, 0);
+    for(i=0;i<bananaX.length;i++){
+        papel.drawImage(imagenBanana, bananaX[i], bananaY[i]);
+    }
+    for(i=0;i<appleX.length;i++){
+        papel.drawImage(imagenApple, appleX[i], appleY[i]);
+    }
+    for(i=0;i<pineAppleX.length;i++){
+        papel.drawImage(imagenPineapple, pineAppleX[i], pineAppleY[i]);
+    }
+    papel.drawImage(imagenPlayer, playerX, playerY-velocidad);
+    playerY= playerY-velocidad;
+    pasoSound();
+    comerFruta();
+}
+
+function bajarPlayer(){
+    papel.clearRect(0, 0, cuadro.width, cuadro.height);
+    papel.drawImage(imagen, 0, 0);
+    for(i=0;i<bananaX.length;i++){
+        papel.drawImage(imagenBanana, bananaX[i], bananaY[i]);
+    }
+    for(i=0;i<appleX.length;i++){
+        papel.drawImage(imagenApple, appleX[i], appleY[i]);
+    }
+    for(i=0;i<pineAppleX.length;i++){
+        papel.drawImage(imagenPineapple, pineAppleX[i], pineAppleY[i]);
+    }
+    papel.drawImage(imagenPlayer, playerX, playerY+velocidad);
+    playerY= playerY+velocidad;
+    pasoSound();
+    comerFruta();
+}
+
+
+function izquierdaPlayer(){
+    papel.clearRect(0, 0, cuadro.width, cuadro.height);
+    papel.drawImage(imagen, 0, 0);
+    for(i=0;i<bananaX.length;i++){
+        papel.drawImage(imagenBanana, bananaX[i], bananaY[i]);
+    }
+    for(i=0;i<appleX.length;i++){
+        papel.drawImage(imagenApple, appleX[i], appleY[i]);
+    }
+    for(i=0;i<pineAppleX.length;i++){
+        papel.drawImage(imagenPineapple, pineAppleX[i], pineAppleY[i]);
+    }
+    papel.drawImage(imagenPlayer, playerX-velocidad, playerY);
+    playerX=playerX-velocidad;
+    pasoSound();
+    comerFruta();
+}
+
+
+
+function derechaPlayer(){
+    papel.clearRect(0, 0, cuadro.width, cuadro.height);
+    papel.drawImage(imagen, 0, 0);
+    for(i=0;i<bananaX.length;i++){
+        papel.drawImage(imagenBanana, bananaX[i], bananaY[i]);
+    }
+    for(i=0;i<appleX.length;i++){
+        papel.drawImage(imagenApple, appleX[i], appleY[i]);
+    }
+    for(i=0;i<pineAppleX.length;i++){
+        papel.drawImage(imagenPineapple, pineAppleX[i], pineAppleY[i]);
+    }
+    papel.drawImage(imagenPlayer, playerX+velocidad, playerY);
+    playerX=playerX+velocidad;
+    pasoSound();
+    comerFruta();
 }
 
 function moverPlayer(evento) {
