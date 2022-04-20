@@ -179,7 +179,7 @@ function silenciarPasos(){
 arriba.addEventListener("click",subirPlayer);
 abajo.addEventListener("click",bajarPlayer);
 izquierda.addEventListener("click",izquierdaPlayer);
-derecha.addEventListener("clickd",derechaPlayer);
+derecha.addEventListener("click",derechaPlayer);
 
 function subirPlayer(){
     papel.clearRect(0, 0, cuadro.width, cuadro.height);
