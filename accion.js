@@ -291,6 +291,7 @@ function siguenteNivel(){
         nivelSound();
     }else{
         stop=true;
+        stopPasoSound();
         papel.clearRect(0, 0, cuadro.width, cuadro.height);
         papel.drawImage(imagen, 0, 0);
         papel.drawImage(imagenWin, 200,200);
