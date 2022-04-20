@@ -138,6 +138,33 @@ function cargarPlayer() {
 
 document.addEventListener("keydown", moverPlayer);
 document.addEventListener("keyup", silenciarPasos);
+document.addEventListener("mousemove", moverPlayerTactil);
+
+function moverPlayerTactil(evento) {
+    if(stop==false){
+        papel.clearRect(0, 0, cuadro.width, cuadro.height);
+        papel.drawImage(imagen, 0, 0);
+        for(i=0;i<bananaX.length;i++){
+            papel.drawImage(imagenBanana, bananaX[i], bananaY[i]);
+        }
+        for(i=0;i<appleX.length;i++){
+            papel.drawImage(imagenApple, appleX[i], appleY[i]);
+        }
+        for(i=0;i<pineAppleX.length;i++){
+            papel.drawImage(imagenPineapple, pineAppleX[i], pineAppleY[i]);
+        }
+
+        papel.drawImage(imagenPlayer,evento.clientX-435, evento.clientY-100);
+                playerY= evento.clientY-100;
+                playerX= evento.clientX-435;
+                pasoSound();
+                comerFruta();
+        
+    }else if(stop==true){
+        console.log("paralizado");
+    }
+
+}
 
 function silenciarPasos(){
     stopPasoSound();
